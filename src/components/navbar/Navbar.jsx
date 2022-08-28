@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./Navbar.scss";
 
 //Icons
@@ -7,7 +7,13 @@ import {SearchOutlined, LanguageOutlined, DarkModeOutlined, FullscreenExitOutlin
 //Images
 import avatar from "../../images/avatar.jpg";
 
+//Contexts
+import { DarkContext } from '../../context/DarkModeContext';
+
 const Navbar = () => {
+
+    const {dark, setDark} = useContext(DarkContext);
+
     return (
         <div className='navbar'>
             <div className="wrapper">
@@ -21,7 +27,7 @@ const Navbar = () => {
                         English
                     </div>
                     <div className="item">
-                        <DarkModeOutlined className='icon'/>
+                        <DarkModeOutlined onClick={() => setDark(dark => !dark)} className='icon'/>
                     </div>
                     <div className="item">
                         <FullscreenExitOutlined className='icon'/>

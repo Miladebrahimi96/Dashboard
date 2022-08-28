@@ -1,0 +1,81 @@
+.app.dark {
+    background-color: #111;
+    color: #f7f7f7;
+
+
+    .chartGrid{
+        stroke: rgb(109, 107, 107);
+    }
+
+    .table {
+        background-color: #111;
+
+        .tableCell {
+            color: #ccc;
+        }
+    }
+
+    .navbar{
+        color: #ccc;
+        border-color: #444;
+
+        .search{
+            border-color: #ccc;
+            input {
+                color: #ccc;
+            }
+        }
+    }
+
+    .sidebar{
+        background-color: #111;
+        border-color: #444;
+
+        .top{
+            .logo{
+                color: #999;
+            }
+        }
+        hr{
+            border-color: #444;
+        }
+
+        ul{
+            li{
+                &:hover{
+                    background-color: #444;
+                }
+
+                .icon{
+                    color: #444;
+                }
+            }
+        }
+    }
+    .datatable{
+
+        .dataGrid {
+            color: #ccc;
+
+            border: none;
+        }
+
+        .viewButton, .deleteButton {
+            color: #ccc;
+            border: none;
+        }
+
+        .datatableTitle{
+            a{
+                color: #ccc;
+                border-color: #444;
+            }
+        }
+    }
+
+    .formInput{
+        input{
+            color: #ccc;
+        }
+    }
+}

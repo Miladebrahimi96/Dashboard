@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
 
 //ICONS
 import {Dashboard, PersonOutline, Inventory2Outlined, TocOutlined, ShowChartOutlined, Notifications, HealthAndSafety, PsychologyOutlined, SettingsOutlined, AccountCircleOutlined, LogoutOutlined, LocalShippingOutlined} from '@mui/icons-material';
 
+//Context
+import { DarkContext } from '../../context/DarkModeContext';
+
 const Sidebar = () => {
+
+    const { setDark } = useContext(DarkContext);
+
     return (
         <div className='sidebar'>
             <div className="top">
@@ -75,8 +81,8 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="bottom">
-                <div className="colorOption"></div>
-                <div className="colorOption"></div>
+                <div onClick={() => setDark(false)} className="colorOption"></div>
+                <div onClick={() => setDark(true)}className="colorOption"></div>
             </div>
         </div>
     );

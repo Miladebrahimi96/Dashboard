@@ -10,5 +10,5 @@ react circular progressbar
 this project does not use real data. it uses temporary data!
 
 
-still dark mode and mobile responsive are yet to complete. 
+mobile responsive are yet to complete. 
 
